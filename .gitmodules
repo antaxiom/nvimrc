@@ -1,0 +1,3 @@
+[submodule "my_plugins/onedark.vim"]
+	path = my_plugins/onedark.vim
+	url = https://github.com/antaxiom/onedark.vim.git

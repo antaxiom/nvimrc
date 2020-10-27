@@ -134,6 +134,7 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable 
 
+<<<<<<< HEAD
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
@@ -143,6 +144,9 @@ try
     colorscheme desert
 catch
 endtry
+=======
+set t_Co=256
+>>>>>>> 4344865 (Intial Commit)
 
 set background=dark
 

@@ -1,9 +1,12 @@
 ![VIM](https://dnp4pehkvoo6n.cloudfront.net/43c5af597bd5c1a64eb1829f011c208f/as/Ultimate%20Vimrc.svg)
 
+<<<<<<< HEAD
 # This is a fork
 
 I'm keeping the original README here as I can't be bothered to change it but this is a fork of *The* **Ultimate** ***vimrc***, I've adapted it to fit my more ide oriented needs and neovim
 
+=======
+>>>>>>> 4344865 (Intial Commit)
 # The Ultimate vimrc
 
 Over the last 10 years, I have used and tweaked Vim. This configuration is the ultimate vimrc (or at least my version of it).
