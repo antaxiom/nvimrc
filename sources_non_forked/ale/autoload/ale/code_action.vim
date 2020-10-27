@@ -1,27 +1,70 @@
 " Author: Jerko Steiner <jerko.steiner@gmail.com>
 " Description: Code action support for LSP / tsserver
 
-function! ale#code_action#HandleCodeAction(code_action, should_save) abort
+function! ale#code_action#HandleCodeAction(code_action, options) abort
     let l:current_buffer = bufnr('')
     let l:changes = a:code_action.changes
+    let l:should_save = get(a:options, 'should_save')
+    let l:force_save = get(a:options, 'force_save')
+    let l:safe_changes = []
 
     for l:file_code_edit in l:changes
         let l:buf = bufnr(l:file_code_edit.fileName)
 
         if l:buf != -1 && l:buf != l:current_buffer && getbufvar(l:buf, '&mod')
-            call ale#util#Execute('echom ''Aborting action, file is unsaved''')
+            if !l:force_save
+                call ale#util#Execute('echom ''Aborting action, file is unsaved''')
 
-            return
+                return
+            endif
+        else
+            call add(l:safe_changes, l:file_code_edit)
         endif
     endfor
 
-    for l:file_code_edit in l:changes
+    for l:file_code_edit in l:safe_changes
         call ale#code_action#ApplyChanges(
-        \ l:file_code_edit.fileName,
-        \ l:file_code_edit.textChanges,
-        \ a:should_save,
-        \ )
+        \   l:file_code_edit.fileName,
+        \   l:file_code_edit.textChanges,
+        \   l:should_save,
+        \)
     endfor
+endfunction
+
+function! s:ChangeCmp(left, right) abort
+    if a:left.start.line < a:right.start.line
+        return -1
+    endif
+
+    if a:left.start.line > a:right.start.line
+        return 1
+    endif
+
+    if a:left.start.offset < a:right.start.offset
+        return -1
+    endif
+
+    if a:left.start.offset > a:right.start.offset
+        return 1
+    endif
+
+    if a:left.end.line < a:right.end.line
+        return -1
+    endif
+
+    if a:left.end.line > a:right.end.line
+        return 1
+    endif
+
+    if a:left.end.offset < a:right.end.offset
+        return -1
+    endif
+
+    if a:left.end.offset > a:right.end.offset
+        return 1
+    endif
+
+    return 0
 endfunction
 
 function! ale#code_action#ApplyChanges(filename, changes, should_save) abort
@@ -48,7 +91,8 @@ function! ale#code_action#ApplyChanges(filename, changes, should_save) abort
     let l:column_offset = 0
     let l:last_end_line = 0
 
-    for l:code_edit in a:changes
+    " Changes have to be sorted so we apply them from top-to-bottom.
+    for l:code_edit in sort(copy(a:changes), function('s:ChangeCmp'))
         if l:code_edit.start.line isnot l:last_end_line
             let l:column_offset = 0
         endif

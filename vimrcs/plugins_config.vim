@@ -116,30 +116,97 @@ let g:multi_cursor_quit_key            = '<Esc>'
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:lightline = {
+"       \ 'colorscheme': 'wombat',
+"       \ 'active': {
+"       \   'left': [ ['mode', 'paste'],
+"       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+"       \   'right': [ [ 'lineinfo' ], ['percent'] ]
+"       \ },
+"       \ 'component': {
+"       \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+"       \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+"       \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
+"       \ },
+"       \ 'component_visible_condition': {
+"       \   'readonly': '(&filetype!="help"&& &readonly)',
+"       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+"       \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
+"       \ },
+"       \ 'separator': { 'left': ' ', 'right': ' ' },
+"       \ 'subseparator': { 'left': ' ', 'right': ' ' }
+"       \ }
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => lightline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ ['mode', 'paste'],
-      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-      \   'right': [ [ 'lineinfo' ], ['percent'] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
-      \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
-      \ }
+
+" enable tabline
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = ''
+" let g:airline#extensions#tabline#right_sep = ''
+" let g:airline#extensions#tabline#right_alt_sep = ''
+" let airline#extensions#tabline#show_splits = 0
+" let airline#extensions#tabline#tabs_label = ''
+
+" Disable tabline close button
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#fnamecollapse = 1
+
+let g:airline_extensions = ['branch', 'hunks', 'coc']
+
+let g:airline#extensions#tabline#buffers_label = ''
+let g:airline#extensions#tabline#tabs_label = ''
+let g:airline#extensions#coc#enabled = 1
+
+" Just show the file name
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
+" let g:airline_left_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'z', 'warning', 'error']]
+" let g:airline_skip_empty_sections = 1
+
+let g:airline_section_c = airline#section#create([''])
+" let g:airline_section_z = airline#section#create(['linenr'])
+
+" Switch to your current theme
+" let g:airline_theme = 'onedark'
+
+" Always show tabs
+set showtabline=2
+
+" We don't need to see things like -- INSERT -- anymore
+set noshowmode
+
+" Sections
+" let g:airline_section_c = ''
+let g:airline_section_a = "Mach 3"
+" let g:airline_section_a = ""
+let g:airline_section_y = ''
+let g:webdevicons_enable_airline_tabline = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Bullets
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Bullets.vim
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+    \ 'text',
+    \ 'gitcommit',
+    \ 'scratch'
+    \]
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
@@ -167,6 +234,12 @@ let g:ale_set_highlights = 0
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => coc.nvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Nothing here yet but there probably will be
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

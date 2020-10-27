@@ -17,3 +17,12 @@
 [submodule "sources_non_forked/vim-xtabline"]
 	path = sources_non_forked/vim-xtabline
 	url = https://github.com/mg979/vim-xtabline.git
+[submodule "sources_non_forked/rnvimr"]
+	path = sources_non_forked/rnvimr
+	url = https://github.com/kevinhwang91/rnvimr.git
+[submodule "sources_non_forked/bullets.vim"]
+	path = sources_non_forked/bullets.vim
+	url = https://github.com/dkarter/bullets.vim.git
+[submodule "sources_non_forked/nvim-colorizer.lua"]
+	path = sources_non_forked/nvim-colorizer.lua
+	url = https://github.com/norcalli/nvim-colorizer.lua.git
