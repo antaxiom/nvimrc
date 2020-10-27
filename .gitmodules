@@ -1,3 +1,19 @@
 [submodule "my_plugins/onedark.vim"]
 	path = my_plugins/onedark.vim
 	url = https://github.com/antaxiom/onedark.vim.git
+[submodule "sources_non_forked/vim-airline-themes"]
+	path = sources_non_forked/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "sources_non_forked/onedark.vim"]
+	path = sources_non_forked/onedark.vim
+	url = https://github.com/antaxiom/onedark.vim.git
+[submodule "sources_non_forked/vim-airline"]
+	path = sources_non_forked/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "sources_non_forked/coc.nvim"]
+	path = sources_non_forked/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+	branch = release
+[submodule "sources_non_forked/vim-xtabline"]
+	path = sources_non_forked/vim-xtabline
+	url = https://github.com/mg979/vim-xtabline.git
