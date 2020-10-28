@@ -29,3 +29,12 @@
 [submodule "sources_non_forked/AutoComplPop"]
 	path = sources_non_forked/AutoComplPop
 	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "sources_non_forked/vim-polyglot"]
+	path = sources_non_forked/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "sources_non_forked/vim-smoother"]
+	path = sources_non_forked/vim-smoother
+	url = https://github.com/psliwka/vim-smoothie.git
+[submodule "sources_non_forked/vim-smoothie"]
+	path = sources_non_forked/vim-smoothie
+	url = https://github.com/psliwka/vim-smoothie.git
