@@ -38,3 +38,9 @@
 [submodule "sources_non_forked/vim-smoothie"]
 	path = sources_non_forked/vim-smoothie
 	url = https://github.com/psliwka/vim-smoothie.git
+[submodule "sources_non_forked/vim-floaterm"]
+	path = sources_non_forked/vim-floaterm
+	url = https://github.com/voldikss/vim-floaterm.git
+[submodule "sources_non_forked/vimwiki"]
+	path = sources_non_forked/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

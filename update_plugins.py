@@ -47,8 +47,6 @@ vim-gitgutter https://github.com/airblade/vim-gitgutter
 gruvbox https://github.com/morhetz/gruvbox
 vim-flake8 https://github.com/nvie/vim-flake8
 vim-pug https://github.com/digitaltoad/vim-pug
-lightline.vim https://github.com/itchyny/lightline.vim
-lightline-ale https://github.com/maximbaz/lightline-ale
 vim-abolish https://github.com/tpope/tpope-vim-abolish
 rust.vim https://github.com/rust-lang/rust.vim
 vim-markdown https://github.com/plasticboy/vim-markdown
@@ -57,6 +55,16 @@ vim-ruby https://github.com/vim-ruby/vim-ruby
 typescript-vim https://github.com/leafgarland/typescript-vim
 vim-javascript https://github.com/pangloss/vim-javascript
 vim-python-pep8-indent https://github.com/Vimjas/vim-python-pep8-indent
+vim-airline https://github.com/vim-airline/vim-airline
+vim-airline-themes https://github.com/vim-airline/vim-airline-themes
+vim-polyglot https://github.com/sheerun/vim-polyglot
+vim-smoothie https://github.com/psliwka/vim-smoothie
+vim-xtabline https://github.com/mg979/vim-xtabline
+onedark.vim https://github.com/antaxiom/onedark.vim
+coc.nvim -b release https://github.com/neoclide/coc.nvim
+bullets.vim https://github.com/dkarter/bullets.vim
+vim-better-whitespace https://github.com/ntpeters/vim-better-whitespace
+vimwiki https://github.com/vimwiki/vimwiki.git
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"

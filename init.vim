@@ -22,4 +22,7 @@ set mouse=a
 set clipboard+=unnamedplus
 set number
 
+set ignorecase
+set smartindent
 lua require'plug-colorizer'
+inoremap <silent> <leader>r :FloatermNew ranger<CR>
