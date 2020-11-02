@@ -65,6 +65,7 @@ coc.nvim -b release https://github.com/neoclide/coc.nvim
 bullets.vim https://github.com/dkarter/bullets.vim
 vim-better-whitespace https://github.com/ntpeters/vim-better-whitespace
 vimwiki https://github.com/vimwiki/vimwiki.git
+vimtex https://github.com/lervag/vimtex.git
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"
