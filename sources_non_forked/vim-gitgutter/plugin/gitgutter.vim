@@ -12,6 +12,8 @@ if v:version < 703 || (v:version == 703 && !has("patch105"))
   finish
 endif
 
+let s:nomodeline = (v:version > 703 || (v:version == 703 && has('patch442'))) ? '<nomodeline>' : ''
+
 function! s:set(var, default) abort
   if !exists(a:var)
     if type(a:default)
@@ -74,6 +76,7 @@ call s:set('g:gitgutter_async',                          1)
 call s:set('g:gitgutter_log',                            0)
 call s:set('g:gitgutter_use_location_list',              0)
 call s:set('g:gitgutter_close_preview_on_escape',        0)
+call s:set('g:gitgutter_show_msg_on_hunk_jumping',       1)
 
 call s:set('g:gitgutter_git_executable', 'git')
 if !executable(g:gitgutter_git_executable)
@@ -226,7 +229,20 @@ nnoremap <silent> <Plug>GitGutterPreviewHunk   :call gitgutter#utility#warn('ple
 function! s:on_bufenter()
   call gitgutter#setup_maps()
 
-  if has('vim_starting') && !$VIM_GITGUTTER_TEST | return | endif
+  " To keep vim's start-up fast, do not process the buffer when vim is starting.
+  " Instead process it a short time later.  Normally we would rely on our
+  " CursorHold autocommand to handle this but it turns out CursorHold is not
+  " guaranteed to fire if the user has not typed anything yet; so set up a
+  " timer instead.  The disadvantage is that if CursorHold does fire, the
+  " plugin will do a round of unnecessary work; but since there will not have
+  " been any changes to the buffer since the first round, the second round
+  " will be cheap.
+  if has('vim_starting') && !$VIM_GITGUTTER_TEST
+    if exists('*timer_start')
+      call timer_start(&updatetime, 'GitGutterCursorHold')
+    endif
+    return
+  endif
 
   if exists('t:gitgutter_didtabenter') && t:gitgutter_didtabenter
     let t:gitgutter_didtabenter = 0
@@ -234,6 +250,10 @@ function! s:on_bufenter()
   else
     call gitgutter#process_buffer(bufnr(''), !g:gitgutter_terminal_reports_focus)
   endif
+endfunction
+
+function! GitGutterCursorHold(timer)
+  execute 'doautocmd' s:nomodeline 'gitgutter CursorHold'
 endfunction
 
 " Autocommands {{{
