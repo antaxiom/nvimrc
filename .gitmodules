@@ -47,3 +47,6 @@
 [submodule "sources_non_forked/vimtex"]
 	path = sources_non_forked/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "sources_non_forked/pear-tree"]
+	path = sources_non_forked/pear-tree
+	url = https://github.com/tmsvg/pear-tree.git
