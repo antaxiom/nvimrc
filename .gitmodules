@@ -50,3 +50,6 @@
 [submodule "sources_non_forked/pear-tree"]
 	path = sources_non_forked/pear-tree
 	url = https://github.com/tmsvg/pear-tree.git
+[submodule "sources_non_forked/vim-highlightedyank"]
+	path = sources_non_forked/vim-highlightedyank
+	url = https://github.com/machakann/vim-highlightedyank.git
