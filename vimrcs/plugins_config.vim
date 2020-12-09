@@ -167,9 +167,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
-" let g:airline_left_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
@@ -177,7 +177,7 @@ let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'z', 'warning'
 " let g:airline_skip_empty_sections = 1
 
 let g:airline_section_c = airline#section#create([''])
-" let g:airline_section_z = airline#section#create(['linenr'])
+let g:airline_section_z = airline#section#create(['spell',' ', 'linenr', ' ', 'ffenc'])
 
 " Switch to your current theme
 " let g:airline_theme = 'onedark'
@@ -195,6 +195,31 @@ let g:airline_section_a = "Mach 3"
 let g:airline_section_y = ''
 let g:webdevicons_enable_airline_tabline = 1
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" XTabline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+    let g:xtabline_settings = {
+        \'pin': '車',
+        \'star': '★',
+        \'book': '',
+        \'lock': '🔒',
+        \'hammer': '🔨',
+        \'tick': '✔',
+        \'cross': '✖',
+        \'warning': '⚠',
+        \'menu': '☰',
+        \'apple': '',
+        \'linux': '',
+        \'windows': '⌘',
+        \'git': '',
+        \'palette': '🎨',
+        \'lens': '🔍',
+        \'flag': '🏁',
+        \'tab_icon': [" ", " "]
+        \}
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bullets
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -211,9 +236,9 @@ let g:bullets_enabled_file_types = [
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:goyo_width=100
-let g:goyo_margin_top = 2
-let g:goyo_margin_bottom = 2
+let g:goyo_width=120
+let g:goyo_margin_top = 0
+let g:goyo_margin_bottom = 0
 nnoremap <silent> <leader>z :Goyo<cr>
 
 
@@ -223,17 +248,14 @@ nnoremap <silent> <leader>z :Goyo<cr>
 let g:ale_linters = {
 \   'javascript': ['jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'golint', 'errcheck'],
+\   'lua': ['luacheck']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
-" Disabling highlighting
-let g:ale_set_highlights = 0
-
 " Only run linting when saving the file
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc.nvim

@@ -53,3 +53,9 @@
 [submodule "sources_non_forked/vim-highlightedyank"]
 	path = sources_non_forked/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank.git
+[submodule "sources_non_forked/vim-devicons"]
+	path = sources_non_forked/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule "sources_non_forked/vim-grammarous"]
+	path = sources_non_forked/vim-grammarous
+	url = https://github.com/rhysd/vim-grammarous.git

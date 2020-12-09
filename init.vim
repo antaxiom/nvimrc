@@ -23,10 +23,10 @@ colorscheme onedark
 
 autocmd BufWritePre * %s/\s\+$//e
 
-
     if empty(v:servername) && exists('*remote_startserver')
       call remote_startserver('VIM')
     endif
 
 let g:yankring_clipboard_monitor=0
+
 

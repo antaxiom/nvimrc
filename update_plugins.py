@@ -66,6 +66,8 @@ vim-better-whitespace https://github.com/ntpeters/vim-better-whitespace
 vimwiki https://github.com/vimwiki/vimwiki.git
 vimtex https://github.com/lervag/vimtex.git
 pear-tree https://github.com/tmsvg/pear-tree.git
+vim-devicons https://github.com/ryanoasis/vim-devicons.git
+vim-grammarous https://github.com/rhysd/vim-grammarous.git
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"
