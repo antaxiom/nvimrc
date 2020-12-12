@@ -59,3 +59,15 @@
 [submodule "sources_non_forked/vim-grammarous"]
 	path = sources_non_forked/vim-grammarous
 	url = https://github.com/rhysd/vim-grammarous.git
+[submodule "sources_non_forked/markdown-preview.nvim"]
+	path = sources_non_forked/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git
+[submodule "sources_non_forked/vim-pandoc-syntax"]
+	path = sources_non_forked/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "sources_non_forked/vim-pandoc"]
+	path = sources_non_forked/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
+[submodule "sources_non_forked/limelight.vim"]
+	path = sources_non_forked/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git

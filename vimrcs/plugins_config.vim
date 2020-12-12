@@ -177,7 +177,7 @@ let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'z', 'warning'
 " let g:airline_skip_empty_sections = 1
 
 let g:airline_section_c = airline#section#create([''])
-let g:airline_section_z = airline#section#create(['spell',' ', 'linenr', ' ', 'ffenc'])
+let g:airline_section_z = airline#section#create(['linenr', ' ', 'ffenc'])
 
 " Switch to your current theme
 " let g:airline_theme = 'onedark'
@@ -234,12 +234,12 @@ let g:bullets_enabled_file_types = [
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vimroom
+" => Goyo and Limelight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:goyo_width=120
+let g:goyo_width=110
 let g:goyo_margin_top = 0
 let g:goyo_margin_bottom = 0
-nnoremap <silent> <leader>z :Goyo<cr>
+nnoremap <silent> <leader>z :Goyo <ESC> :Limelight!!0.8<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -253,9 +253,6 @@ let g:ale_linters = {
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
-
-" Only run linting when saving the file
-let g:ale_lint_on_enter = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc.nvim
@@ -384,3 +381,10 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 let g:tex_flavor = 'latex'
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pandoc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:pandoc#modules#disabled = ["folding"]
+
+let g:pandoc#syntax#conceal#blacklist=["atx", "list"]

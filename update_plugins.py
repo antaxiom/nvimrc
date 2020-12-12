@@ -43,9 +43,6 @@ vim-zenroom2 https://github.com/amix/vim-zenroom2
 vim-repeat https://github.com/tpope/vim-repeat
 vim-commentary https://github.com/tpope/vim-commentary
 vim-gitgutter https://github.com/airblade/vim-gitgutter
-gruvbox https://github.com/morhetz/gruvbox
-vim-flake8 https://github.com/nvie/vim-flake8
-vim-pug https://github.com/digitaltoad/vim-pug
 vim-abolish https://github.com/tpope/tpope-vim-abolish
 rust.vim https://github.com/rust-lang/rust.vim
 vim-markdown https://github.com/plasticboy/vim-markdown
@@ -53,7 +50,6 @@ vim-gist https://github.com/mattn/vim-gist
 vim-ruby https://github.com/vim-ruby/vim-ruby
 typescript-vim https://github.com/leafgarland/typescript-vim
 vim-javascript https://github.com/pangloss/vim-javascript
-vim-python-pep8-indent https://github.com/Vimjas/vim-python-pep8-indent
 vim-airline https://github.com/vim-airline/vim-airline
 vim-airline-themes https://github.com/vim-airline/vim-airline-themes
 vim-polyglot https://github.com/sheerun/vim-polyglot
@@ -68,6 +64,10 @@ vimtex https://github.com/lervag/vimtex.git
 pear-tree https://github.com/tmsvg/pear-tree.git
 vim-devicons https://github.com/ryanoasis/vim-devicons.git
 vim-grammarous https://github.com/rhysd/vim-grammarous.git
+markdown-preview.nvim https://github.com/iamcco/markdown-preview.nvim.git
+vim-pandoc-syntax https://github.com/vim-pandoc/vim-pandoc.git
+vim-pandoc https://github.com/vim-pandoc/vim-pandoc.git
+limelight.vim https://github.com/junegunn/limelight.vim.git
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"

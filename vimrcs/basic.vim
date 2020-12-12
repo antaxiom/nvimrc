@@ -107,6 +107,9 @@ set lazyredraw
 " For regular expressions turn magic on
 set magic
 
+" Sets the cursor line
+set cursorline
+
 " Show matching brackets when text indicator is over them
 set showmatch
 " How many tenths of a second to blink when matching brackets
@@ -218,6 +221,10 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Stop vim highlighting
+"
+nmap <Esc> :noh<CR>
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT

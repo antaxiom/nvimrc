@@ -27,6 +27,4 @@ autocmd BufWritePre * %s/\s\+$//e
       call remote_startserver('VIM')
     endif
 
-let g:yankring_clipboard_monitor=0
-
-
+let g:yankring_clipboard_monitor=[]
