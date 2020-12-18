@@ -28,3 +28,8 @@ autocmd BufWritePre * %s/\s\+$//e
     endif
 
 let g:yankring_clipboard_monitor=[]
+
+au BufNewFile,BufRead * nested
+  \ if &buftype != "help" |
+  \   tab sball |
+  \ endif
