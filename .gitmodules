@@ -71,3 +71,6 @@
 [submodule "sources_non_forked/limelight.vim"]
 	path = sources_non_forked/limelight.vim
 	url = https://github.com/junegunn/limelight.vim.git
+[submodule "sources_non_forked/nvim-treesitter"]
+	path = sources_non_forked/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
