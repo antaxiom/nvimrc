@@ -67,7 +67,6 @@ vim-grammarous https://github.com/rhysd/vim-grammarous.git
 markdown-preview.nvim https://github.com/iamcco/markdown-preview.nvim.git
 vim-pandoc-syntax https://github.com/vim-pandoc/vim-pandoc.git
 vim-pandoc https://github.com/vim-pandoc/vim-pandoc.git
-limelight.vim https://github.com/junegunn/limelight.vim.git
 nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter.git
 """.strip()
 

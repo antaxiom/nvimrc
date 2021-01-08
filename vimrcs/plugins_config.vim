@@ -236,7 +236,7 @@ let g:bullets_enabled_file_types = [
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Goyo and Limelight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:goyo_width=110
+let g:goyo_width=65
 let g:goyo_margin_top = 0
 let g:goyo_margin_bottom = 0
 nnoremap <silent> <leader>z :Goyo <ESC> :Limelight!!0.8<cr>
@@ -323,7 +323,7 @@ let g:floaterm_autoclose=1
 " Filetypes enabled for
 let g:vimwiki_filetypes = ['markdown']
 
-let g:vimwiki_list = [{'path': '~/Documents/notes/vimwiki/',
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/vimwiki/',
 \ 'exclude_files': ['**/README.md', '**/Readme.md'] }]
 
 " let g:vimwiki_auto_header = 0

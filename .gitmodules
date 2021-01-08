@@ -65,9 +65,6 @@
 [submodule "sources_non_forked/vim-pandoc"]
 	path = sources_non_forked/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc.git
-[submodule "sources_non_forked/limelight.vim"]
-	path = sources_non_forked/limelight.vim
-	url = https://github.com/junegunn/limelight.vim.git
 [submodule "sources_non_forked/nvim-treesitter"]
 	path = sources_non_forked/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
@@ -77,3 +74,12 @@
 [submodule "sources_non_forked/nerdtree"]
 	path = sources_non_forked/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "sources_non_forked/nvim-web-devicons"]
+	path = sources_non_forked/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-web-devicons.git
+[submodule "sources_non_forked/barbar.nvim"]
+	path = sources_non_forked/barbar.nvim
+	url = https://github.com/romgrk/barbar.nvim.git
+[submodule "sources_non_forked/limelight.vim"]
+	path = sources_non_forked/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git
