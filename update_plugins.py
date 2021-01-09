@@ -54,7 +54,6 @@ vim-airline https://github.com/vim-airline/vim-airline
 vim-airline-themes https://github.com/vim-airline/vim-airline-themes
 vim-polyglot https://github.com/sheerun/vim-polyglot
 vim-smoothie https://github.com/psliwka/vim-smoothie
-vim-xtabline https://github.com/mg979/vim-xtabline
 onedark.vim https://github.com/antaxiom/onedark.vim
 coc.nvim -b release https://github.com/neoclide/coc.nvim
 bullets.vim https://github.com/dkarter/bullets.vim
@@ -68,6 +67,7 @@ markdown-preview.nvim https://github.com/iamcco/markdown-preview.nvim.git
 vim-pandoc-syntax https://github.com/vim-pandoc/vim-pandoc.git
 vim-pandoc https://github.com/vim-pandoc/vim-pandoc.git
 nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter.git
+barbar.nvim ttps://github.com/romgrk/barbar.nvim.git
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"

@@ -14,9 +14,6 @@
 	path = sources_non_forked/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
 	branch = release
-[submodule "sources_non_forked/vim-xtabline"]
-	path = sources_non_forked/vim-xtabline
-	url = https://github.com/mg979/vim-xtabline.git
 [submodule "sources_non_forked/rnvimr"]
 	path = sources_non_forked/rnvimr
 	url = https://github.com/kevinhwang91/rnvimr.git
