@@ -29,10 +29,9 @@ autocmd BufWritePre * %s/\s\+$//e
 
 let g:yankring_clipboard_monitor=[]
 
-au BufNewFile,BufRead * nested
-  \ if &buftype != "help" |
-  \   tab sball |
-  \ endif
+au BufNewFile,BufFilePre,BufRead,BufWritePre *.md set filetype=markdown
+
+let g:snipMate = { 'snippet_version' : 1 }
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -42,3 +41,5 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+

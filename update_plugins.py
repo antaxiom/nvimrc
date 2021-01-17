@@ -45,7 +45,6 @@ vim-commentary https://github.com/tpope/vim-commentary
 vim-gitgutter https://github.com/airblade/vim-gitgutter
 vim-abolish https://github.com/tpope/tpope-vim-abolish
 rust.vim https://github.com/rust-lang/rust.vim
-vim-markdown https://github.com/plasticboy/vim-markdown
 vim-gist https://github.com/mattn/vim-gist
 vim-ruby https://github.com/vim-ruby/vim-ruby
 typescript-vim https://github.com/leafgarland/typescript-vim

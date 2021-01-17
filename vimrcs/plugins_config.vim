@@ -119,27 +119,6 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:lightline = {
-"       \ 'colorscheme': 'wombat',
-"       \ 'active': {
-"       \   'left': [ ['mode', 'paste'],
-"       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-"       \   'right': [ [ 'lineinfo' ], ['percent'] ]
-"       \ },
-"       \ 'component': {
-"       \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-"       \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-"       \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
-"       \ },
-"       \ 'component_visible_condition': {
-"       \   'readonly': '(&filetype!="help"&& &readonly)',
-"       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-"       \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
-"       \ },
-"       \ 'separator': { 'left': ' ', 'right': ' ' },
-"       \ 'subseparator': { 'left': ' ', 'right': ' ' }
-"       \ }
-
 
 " enable tabline
 " let g:airline#extensions#tabline#enabled = 1
@@ -151,12 +130,12 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " let airline#extensions#tabline#tabs_label = ''
 
 " Disable tabline close button
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_close_button = 1
+let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#fnamecollapse = 1
 
-let g:airline_extensions = ['branch', 'hunks', 'coc']
+let g:airline_extensions = ['branch', 'hunks']
 
 let g:airline#extensions#tabline#buffers_label = ''
 let g:airline#extensions#tabline#tabs_label = ''
@@ -180,7 +159,7 @@ let g:airline_section_c = airline#section#create([''])
 let g:airline_section_z = airline#section#create(['linenr', ' ', 'ffenc'])
 
 " Switch to your current theme
-" let g:airline_theme = 'onedark'
+let g:airline_theme = 'onedark'
 
 " Always show tabs
 set showtabline=2
@@ -194,31 +173,6 @@ let g:airline_section_a = "Mach 3"
 " let g:airline_section_a = ""
 let g:airline_section_y = ''
 let g:webdevicons_enable_airline_tabline = 1
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" XTabline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-    let g:xtabline_settings = {
-        \'pin': '車',
-        \'star': '★',
-        \'book': '',
-        \'lock': '🔒',
-        \'hammer': '🔨',
-        \'tick': '✔',
-        \'cross': '✖',
-        \'warning': '⚠',
-        \'menu': '☰',
-        \'apple': '',
-        \'linux': '',
-        \'windows': '⌘',
-        \'git': '',
-        \'palette': '🎨',
-        \'lens': '🔍',
-        \'flag': '🏁',
-        \'tab_icon': [" ", " "]
-        \}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bullets
@@ -388,3 +342,37 @@ let g:tex_flavor = 'latex'
 let g:pandoc#modules#disabled = ["folding"]
 
 let g:pandoc#syntax#conceal#blacklist=["atx", "list"]
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => BarBar.nvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Magic buffer-picking mode
+nnoremap <silent> <A-b> :BufferPick<CR>
+" Sort automatically by...
+nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+nnoremap <silent>    <A-9> :BufferLast<CR>
+" Close buffer
+nnoremap <silent>    <A-c> :BufferClose<CR>
+" Wipeout buffer
+"                          :BufferWipeout<CR>
+" Close commands
+"                          :BufferCloseAllButCurrent<CR>
+"                          :BufferCloseBuffersLeft<CR>
+"                          :BufferCloseBuffersRight<CR>

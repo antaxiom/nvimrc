@@ -67,6 +67,7 @@ source $VIMRUNTIME/menu.vim
 
 " Turn on the Wild menu
 set wildmenu
+set wildmode=longest:full,full
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -385,3 +386,14 @@ endfunction
 
 set mouse=a
 set clipboard+=unnamedplus
+
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
