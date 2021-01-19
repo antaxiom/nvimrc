@@ -80,3 +80,12 @@
 [submodule "sources_non_forked/limelight.vim"]
 	path = sources_non_forked/limelight.vim
 	url = https://github.com/junegunn/limelight.vim.git
+[submodule "sources_non_forked/md-img-paste.vim"]
+	path = sources_non_forked/md-img-paste.vim
+	url = https://github.com/ferrine/md-img-paste.vim.git
+[submodule "sources_non_forked/vim-capslock"]
+	path = sources_non_forked/vim-capslock
+	url = https://github.com/tpope/vim-capslock.git
+[submodule "sources_non_forked/vim-sensible"]
+	path = sources_non_forked/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
