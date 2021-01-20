@@ -66,7 +66,10 @@ markdown-preview.nvim https://github.com/iamcco/markdown-preview.nvim.git
 vim-pandoc-syntax https://github.com/vim-pandoc/vim-pandoc.git
 vim-pandoc https://github.com/vim-pandoc/vim-pandoc.git
 nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter.git
-barbar.nvim ttps://github.com/romgrk/barbar.nvim.git
+barbar.nvim https://github.com/romgrk/barbar.nvim.git
+md-img-paste.vim https://github.com/ferrine/md-img-paste.vim
+vim-capslock https://github.com/tpope/vim-capslock
+vim-sensible https://github.com/tpope/vim-sensible
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"
