@@ -324,16 +324,20 @@ let g:vimwiki_diary_months = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled=1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
-
+    let g:gitgutter_sign_added              = '│'
+    let g:gitgutter_sign_modified           = '│'
+    let g:gitgutter_sign_removed            = '│'
+    let g:gitgutter_sign_removed_first_line = '│'
+    let g:gitgutter_sign_removed_above_and_below = '│'
+    let g:gitgutter_sign_modified_removed   = '│'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Tex
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:tex_flavor = 'latex'
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pandoc
