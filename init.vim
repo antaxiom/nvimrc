@@ -1,15 +1,10 @@
-set runtimepath+=~/.config/nvim
-
+source ~/.config/nvim/vimrcs/plug.vim
 
 source ~/.config/nvim/vimrcs/basic.vim
 source ~/.config/nvim/vimrcs/filetypes.vim
 source ~/.config/nvim/vimrcs/plugins_config.vim
 source ~/.config/nvim/vimrcs/extended.vim
 
-try
-    source ~/.config/nvim/my_configs.vim
-catch
-endtry
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
@@ -17,9 +12,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-lua require'plug-colorizer'
-
-colorscheme onedark
+lua require'colorizer'.setup()
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -33,6 +26,8 @@ au BufNewFile,BufFilePre,BufRead,BufWritePre *.md set filetype=markdown
 
 let g:snipMate = { 'snippet_version' : 1 }
 
+colorscheme onedark
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -41,5 +36,3 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
-
-
