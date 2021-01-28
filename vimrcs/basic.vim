@@ -308,6 +308,8 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
+map z+ 1z=
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -320,7 +322,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 map <leader>q :e ~/buffer<cr>
 
 " Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
+map <leader>X :e ~/buffer.md<cr>
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
@@ -385,7 +387,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set mouse=a
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 
 nnoremap j gj
 nnoremap k gk

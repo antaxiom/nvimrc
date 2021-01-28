@@ -124,7 +124,7 @@ vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 map <leader>g :Ack
 
 " When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+vnoremap <silent> <leader>R :call VisualSelection('replace', '')<CR>
 
 " Do :help cope if you are unsure what cope is. It's super useful!
 "
