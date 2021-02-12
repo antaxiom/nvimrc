@@ -1,7 +1,6 @@
 call plug#begin()
 
 Plug 'mileszs/ack.vim'
-Plug 'dense-analysis/ale'
 Plug 'romgrk/barbar.nvim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'dkarter/bullets.vim'
@@ -19,6 +18,7 @@ Plug 'antaxiom/onedark.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
 Plug 'leafgarland/typescript-vim'
+Plug 'wfxr/minimap.vim'
 Plug 'tpope/vim-abolish'
 Plug 'jdelkins/vim-correction'
 Plug 'vim-airline/vim-airline'
@@ -51,3 +51,10 @@ Plug 'lervag/vimtex'
 Plug 'vimwiki/vimwiki'
 
 call plug#end()
+
+" Automatically install missing plugins on startup
+" Graciously stolen from Christian Chiarulli
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif

@@ -185,6 +185,8 @@ let g:goyo_margin_top = 0
 let g:goyo_margin_bottom = 0
 nnoremap <silent> <leader>z :Goyo <ESC> :Limelight!!0.8<cr>
 
+autocmd! User GoyoEnter nested set eventignore=FocusGained
+autocmd! User GoyoLeave nested set eventignore=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale (syntax checker and linter)

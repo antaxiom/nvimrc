@@ -74,17 +74,17 @@
       "rootPatterns": [".stack.yaml", ".hie-bios", "BUILD.bazel", "cabal.config", "package.yaml"],
       "filetypes": ["hs", "lhs", "haskell"]
     },*/
+    /* "haskell": { */
+    /*   "command": "hie-wrapper", */
+    /*   "args": ["--lsp"], */
+    /*   "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml"], */
+    /*   "filetypes": ["hs", "lhs", "haskell"], */
+    /*   "initializationOptions": { */
+    /*     "languageServerHaskell": {} */
+    /*   } */
+    /* }, */
     "haskell": {
-      "command": "hie-wrapper",
-      "args": ["--lsp"],
-      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml"],
-      "filetypes": ["hs", "lhs", "haskell"],
-      "initializationOptions": {
-        "languageServerHaskell": {}
-      }
-    },
-    /*"haskell": {
-      "command": "/home/leon/Downloads/haskell-language-server-Linux-8.8.2",
+      "command": "/usr/bin/haskell-language-server-8.6.4",
       "args": ["--lsp"],
       "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml"],
       "filetypes": ["hs", "lhs", "haskell"],
@@ -93,7 +93,7 @@
           "formattingProvider": "brittany"
         }
       }
-    },*/
+    },
     "elmLS": {
       "command": "elm-language-server",
       "filetypes": ["elm"],
