@@ -393,9 +393,11 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
+
+" Move lines up and down j/k
+nmap        <silent><A-j> :m .+1<CR>==
+nmap        <silent><A-k> :m .-2<CR>==
+imap        <silent><A-j> <Esc>:m .+1<CR>==gi
+imap        <silent><A-k> <Esc>:m .-2<CR>==gi
+vmap        <silent><A-j> :m '>+1<CR>gv=gv
+vmap        <silent><A-k> :m '<-2<CR>gv=gv

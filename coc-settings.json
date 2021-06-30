@@ -67,33 +67,42 @@
       "command": "/home/leon/coding/projects/rnix-lsp/target/debug/rnix-lsp",
       "filetypes": ["nix"]
     },
-
-    /*"haskell": {
-      "command": "ghcide",
-      "args": ["--lsp"],
-      "rootPatterns": [".stack.yaml", ".hie-bios", "BUILD.bazel", "cabal.config", "package.yaml"],
-      "filetypes": ["hs", "lhs", "haskell"]
-    },*/
     /* "haskell": { */
-    /*   "command": "hie-wrapper", */
+    /*   "command": "ghcide", */
+    /*   "args": ["--lsp"], */
+    /*   "rootPatterns": [".stack.yaml", ".hie-bios", "BUILD.bazel", "cabal.config", "package.yaml"], */
+    /*   "filetypes": ["hs", "lhs", "haskell"] */
+    /* }, */
+  /* "haskell": { */
+  /*   "command": "hie-wrapper", */
+  /*   "args": ["--lsp"], */
+  /*   "rootPatterns": [ */
+  /*     "*.cabal", */
+  /*     "stack.yaml", */
+  /*     "cabal.project", */
+  /*     "package.yaml" */
+  /*   ], */
+  /*   "filetypes": [ */
+  /*     "hs", */
+  /*     "lhs", */
+  /*     "haskell" */
+  /*   ], */
+  /*   "initializationOptions": { */
+  /*     "haskell": { */
+  /*     } */
+  /*   } */
+  /* }, */
+    /* "haskell": { */
+    /*   "command": "/usr/bin/haskell-language-server-8.6.4", */
     /*   "args": ["--lsp"], */
     /*   "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml"], */
     /*   "filetypes": ["hs", "lhs", "haskell"], */
     /*   "initializationOptions": { */
-    /*     "languageServerHaskell": {} */
+    /*     "languageServerHaskell": { */
+    /*       "formattingProvider": "brittany" */
+    /*     } */
     /*   } */
     /* }, */
-    "haskell": {
-      "command": "/usr/bin/haskell-language-server-8.6.4",
-      "args": ["--lsp"],
-      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml"],
-      "filetypes": ["hs", "lhs", "haskell"],
-      "initializationOptions": {
-        "languageServerHaskell": {
-          "formattingProvider": "brittany"
-        }
-      }
-    },
     "elmLS": {
       "command": "elm-language-server",
       "filetypes": ["elm"],
